@@ -23,7 +23,7 @@ class Settings{
                             'dcms_amount_sfields' );
 
         add_settings_field('dcms_min_amount_rol',
-                            __('Monto Mínimo Rol Distribuidor', 'dcms-min-amount-per-rol'),
+                            __('Monto Mínimo Rol Distribuidora', 'dcms-min-amount-per-rol'),
                             [$this, 'dcms_section_input_cb'],
                             'dcms_amount_sfields',
                             'dcms_form_amount_section',

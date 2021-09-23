@@ -34,7 +34,7 @@ final class Loader{
 		define ('DCMS_MINAMOUNT_URL', plugin_dir_url( __FILE__ ));
 		define ('DCMS_MINAMOUNT_BASE_NAME', plugin_basename( __FILE__ ));
 		define ('DCMS_MINAMOUNT_SUBMENU', 'tools.php');
-		define ('DCMS_MINAMOUNT_ROL', 'author');
+		define ('DCMS_MINAMOUNT_ROL', 'distribuidora');
 	}
 
 	// Load all the files we need

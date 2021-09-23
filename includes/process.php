@@ -25,7 +25,7 @@ class Process{
             if( is_cart() ) {
 
                 wc_print_notice(
-                    sprintf( 'Your current order total is %s — you must have an order with a minimum of %s to place your order ' ,
+                    sprintf( 'El total de tu pedido es %s — en tu primera compra debes ordenar al menos %s ' ,
                         wc_price( WC()->cart->total ),
                         wc_price( $minimum )
                     ), 'error'
@@ -34,7 +34,7 @@ class Process{
             } else {
 
                 wc_add_notice(
-                    sprintf( 'Your current order total is %s — you must have an order with a minimum of %s to place your order' ,
+                    sprintf( 'El total de tu pedido es %s — en tu primera compra debes ordenar al menos %s' ,
                         wc_price( WC()->cart->total ),
                         wc_price( $minimum )
                     ), 'error'
