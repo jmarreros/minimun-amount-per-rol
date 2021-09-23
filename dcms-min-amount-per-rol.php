@@ -14,9 +14,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
 namespace dcms\minamount;
 
-// use dcms\minamount\includes\Plugin;
 use dcms\minamount\includes\Submenu;
 use dcms\minamount\includes\Settings;
+use dcms\minamount\includes\Process;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -34,13 +34,14 @@ final class Loader{
 		define ('DCMS_MINAMOUNT_URL', plugin_dir_url( __FILE__ ));
 		define ('DCMS_MINAMOUNT_BASE_NAME', plugin_basename( __FILE__ ));
 		define ('DCMS_MINAMOUNT_SUBMENU', 'tools.php');
+		define ('DCMS_MINAMOUNT_ROL', 'author');
 	}
 
 	// Load all the files we need
 	public function load_includes(){
-		// include_once ( DCMS_MINAMOUNT_PATH . '/includes/plugin.php');
 		include_once ( DCMS_MINAMOUNT_PATH . '/includes/submenu.php');
 		include_once ( DCMS_MINAMOUNT_PATH . '/includes/settings.php');
+		include_once ( DCMS_MINAMOUNT_PATH . '/includes/process.php');
 	}
 
 	// Load tex domain
@@ -66,9 +67,9 @@ final class Loader{
 		$this->load_includes();
 		$this->load_domain();
 		$this->add_link_plugin();
-		// new Plugin();
 		new SubMenu();
 		new Settings();
+		new Process();
 	}
 
 }
